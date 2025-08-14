@@ -8,7 +8,7 @@ public class AccommodationInfoView {
     private static final String EXIT_CMD = "/quit";
     ItineraryInputValidator itineraryInputValidator = new ItineraryInputValidator();
 
-    public AccommodationItinerary inputAccommodationInfo() {
+    public AccommodationItinerary inputAccommodationInfo(String tripId) {
         Scanner scan = new Scanner(System.in);
         String accommodation="";
         String check_in="";
@@ -94,7 +94,7 @@ public class AccommodationInfoView {
             }
         }
 
-        return new AccommodationItinerary(accommodation, check_in, check_out);
+        return new AccommodationItinerary(tripId, accommodation, check_in, check_out);
     }
     public String buildTime(String year, String month, String day, String hour, String minute) {
         int y = Integer.parseInt(year);

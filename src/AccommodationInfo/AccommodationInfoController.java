@@ -2,9 +2,9 @@ package AccommodationInfo;
 
 public class AccommodationInfoController {
 
-    public AccommodationItinerary accommodationInfoControllerRun(){
+    public AccommodationItinerary accommodationInfoControllerRun(String tripId){
         AccommodationInfoView moveInfoView = new AccommodationInfoView();
-        return moveInfoView.inputAccommodationInfo();
+        return moveInfoView.inputAccommodationInfo(tripId);
     }
 
 
