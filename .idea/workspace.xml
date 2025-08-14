@@ -4,8 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <list default="true" id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveInfo/MoveItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveInfo/MoveItinerary.java" afterDir="false" />
+=======
+
+
+    <list default="true" id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="add src">
+      <change afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Itineraries/ItinerariesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Itineraries/ItinerariesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesService.java" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/Itineraries/ItinerariesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Itineraries/Itinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/Itinerary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveInfo/MoveInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfo.java" afterDir="false" />
+
+=======
+>>>>>>> 479c447 (add service2)
+>>>>>>> 40d5a1fe78a98e8f971a71de6781ec9b8932dddd
+=======
     <list default="true" id="c9cbd3c1-5d1c-4961-bf61-8aa686ccff28" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> fb6cb7dcac2e0e8ab57a9d9ec2a247eb6aee0fa4
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +65,30 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feat-AccomodationInfo/jh",
+    "kotlin-language-version-configured": "true",
+    "node.js.selected.package.tslint": "(autodetect)"
+=======
+
+    "Application.ItinerariesView.executor": "Run",
+=======
     "Application.Main.executor": "Run",
+>>>>>>> fb6cb7dcac2e0e8ab57a9d9ec2a247eb6aee0fa4
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feat-itineraries/hw",
+<<<<<<< HEAD
+>>>>>>> 479c447 (add service2)
+    "kotlin-language-version-configured": "true"
+>>>>>>> 40d5a1fe78a98e8f971a71de6781ec9b8932dddd
+=======
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
+>>>>>>> fb6cb7dcac2e0e8ab57a9d9ec2a247eb6aee0fa4
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -55,6 +100,36 @@
       <option name="presentableId" value="Default" />
       <updated>1755148464331</updated>
     </task>
+<<<<<<< HEAD
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1755065752886</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1755065752886</updated>
+    </task>
+<<<<<<< HEAD
+    <task id="LOCAL-00002" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1755137737375</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755137737375</updated>
+=======
+    <task id="LOCAL-00002" summary="add src">
+      <option name="closed" value="true" />
+      <created>1755127096079</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755127096079</updated>
+>>>>>>> 40d5a1fe78a98e8f971a71de6781ec9b8932dddd
+    </task>
+    <option name="localTasksCounter" value="3" />
+=======
+>>>>>>> fb6cb7dcac2e0e8ab57a9d9ec2a247eb6aee0fa4
     <servers />
   </component>
   <component name="XDebuggerManager">
