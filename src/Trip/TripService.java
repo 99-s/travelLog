@@ -20,4 +20,9 @@ public class TripService {
     public List<TripModel> getAllTrips() {
         return tripRepository.findAll();
     }
+
+    public TripModel getTripById(int tripId) {
+        return tripRepository.findById(tripId);
+    }
+
 }

@@ -18,7 +18,16 @@ public class TripRepository {
     }
 
     public List<TripModel> findAll() {
-        return new ArrayList<>(trips); // 원본 리스트 보호
+        return new ArrayList<>(trips);
+    }
+
+    public TripModel findById(int tripId) {
+        for (TripModel trip : trips) {
+            if (trip.getTripId() == tripId) {
+                return trip;
+            }
+        }
+        return null;
     }
 
     public void saveTripAsJson(TripModel trip) {
