@@ -14,4 +14,8 @@ public class ItinerariesService {
         return repository.findAll(tripId);
     }
 
+    //여정 저장
+    public void saveItinerary(Itinerary itinerary) {
+        repository.save(itinerary);
+    }
 }
