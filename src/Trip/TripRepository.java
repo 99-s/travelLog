@@ -17,6 +17,27 @@ public class TripRepository {
         return trip;
     }
 
+    public List<TripModel> findAll() {
+        return new ArrayList<>(trips); // 원본 리스트 보호
+    }
+
+    public void saveTripAsJson(TripModel trip) {
+        String folderPath = "data/itineraries";
+
+        File folder = new File(folderPath);
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+
+        String fileName = folderPath + "/itinerary_" + trip.getTripId() + ".json";
+
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write(tripToJson(trip));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private String tripToJson(TripModel trip) {
         StringBuilder sb = new StringBuilder();
         sb.append("  {\n");
@@ -35,23 +56,6 @@ public class TripRepository {
         sb.append("\n    ]\n");
         sb.append("  }");
         return sb.toString();
-    }
-
-    public void saveTripAsJson(TripModel trip) {
-        String folderPath = "data/itineraries";
-
-        File folder = new File(folderPath);
-        if (!folder.exists()) {
-            folder.mkdirs();
-        }
-
-        String fileName = folderPath + "/itinerary_" + trip.getTripId() + ".json";
-
-        try (FileWriter writer = new FileWriter(fileName)) {
-            writer.write(tripToJson(trip));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
 }

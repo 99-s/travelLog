@@ -1,5 +1,6 @@
 package Trip;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class TripView {
@@ -29,5 +30,17 @@ public class TripView {
         String endDate = endYear + "-" + endMonth + "-" + endDay;
 
         return new TripModel(0, title, startDate, endDate);
+    }
+
+    public void printTripList(List<TripModel> trips) {
+        System.out.println("@@@ 여행 전체 리스트 @@@");
+        if (trips.isEmpty()) {
+            System.out.println("등록된 여행이 없습니다.");
+        } else {
+            for (TripModel trip : trips) {
+                System.out.println(trip.getTripId() + ". " + trip.getTripName() +
+                        " (" + trip.getStartDate() + " ~ " + trip.getEndDate() + ")");
+            }
+        }
     }
 }

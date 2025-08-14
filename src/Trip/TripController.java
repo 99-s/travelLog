@@ -1,5 +1,7 @@
 package Trip;
 
+import java.util.List;
+
 public class TripController {
     private TripView tripView;
     private TripService tripService;
@@ -19,5 +21,10 @@ public class TripController {
         );
 
         tripService.saveTripToJson(savedTrip);
+    }
+
+    public void showAllTrips() {
+        List<TripModel> trips = tripService.getAllTrips();
+        tripView.printTripList(trips);
     }
 }

@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/src/Trip/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Trip/TripRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Trip/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trip/TripView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
