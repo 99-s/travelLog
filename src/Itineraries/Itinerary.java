@@ -1,4 +1,7 @@
 package Itineraries;
+<<<<<<< HEAD
+public class Itinerary {
+=======
 
 import AccommodationInfo.AccommodationInfo;
 import MoveInfo.MoveInfo;
@@ -45,4 +48,5 @@ public class Itinerary {
         this.tripId = tripId;
         this.type= type;
     }
+>>>>>>> 40d5a1fe78a98e8f971a71de6781ec9b8932dddd
 }
