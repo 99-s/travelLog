@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
+    <list default="true" id="b78cdf99-d487-4ad1-9f84-ad72789ca6b2" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MoveInfo/MoveItinerary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveInfo/MoveInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveInfo/MoveInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveInfo/MoveInfoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveInfo/MoveInfoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfoView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trip/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripController.java" afterDir="false" />
+
     <list default="true" id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="first commit">
       <change beforePath="$PROJECT_DIR$/src/Trip/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Trip/TripRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Trip/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Trip/TripView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripView.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +59,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "git-widget-placeholder": "feat-accomodation/mq",
+    "애플리케이션.MoveInfoController.executor": "Run"
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feat-trip/yz",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>

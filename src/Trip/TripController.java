@@ -41,7 +41,4 @@ public class TripController {
             tripView.printTripDetails(trip);
         }
     }
-
-
-
 }
