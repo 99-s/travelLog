@@ -28,14 +28,18 @@ public class HomeController {
                 case 2:
                     System.out.println("여정 기록 선택됨");
                     // TODO: ItinerariesController 호출
+                    itinerariesController.recordItineraries();
                     break;
                 case 3:
                     System.out.println("여행 조회 선택됨");
                     // TODO: TripController 조회 기능 호출
+
                     break;
                 case 4:
                     System.out.println("여정 조회 선택됨");
                     // TODO: ItinerariesController 조회 기능 호출
+                    itinerariesController.showAllItineraries();
+
                     break;
                 case 5:
                     System.out.println("프로그램 종료");

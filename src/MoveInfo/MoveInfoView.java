@@ -7,11 +7,12 @@ public class MoveInfoView {
     private static final String EXIT_CMD = "/quit";
     ItineraryInputValidator itineraryInputValidator = new ItineraryInputValidator();
 
-    public MoveItinerary inputMoveInfo(){
+    public MoveItinerary inputMoveInfo(String tripId){
         Scanner scan = new Scanner(System.in);
         String departure_place="";
         String departure_time="";
         String arrival_time="";
+
 
         System.out.println("@@@ 이동 정보 기록 @@@");
 
@@ -97,7 +98,7 @@ public class MoveInfoView {
             }
         }
 
-        return new MoveItinerary(departure_place, destination, departure_time, arrival_time);
+        return new MoveItinerary(tripId,departure_place, destination, departure_time, arrival_time);
     }
 
     public String buildTime(String year, String month, String day, String hour, String minute) {

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="first commit">
       <change afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -29,45 +30,42 @@
 =======
 >>>>>>> 479c447 (add service2)
 >>>>>>> 40d5a1fe78a98e8f971a71de6781ec9b8932dddd
+=======
+    <list default="true" id="c9cbd3c1-5d1c-4961-bf61-8aa686ccff28" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> fb6cb7dcac2e0e8ab57a9d9ec2a247eb6aee0fa4
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;hiwonwon&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "hiwonwon"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/99-s/travelLog.git&quot;,
-    &quot;accountId&quot;: &quot;01436d82-fc0a-4483-b27c-357824480795&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/99-s/travelLog.git",
+    "accountId": "01436d82-fc0a-4483-b27c-357824480795"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="31Djqexh4BSUNu7MDGapNkAIdiP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="31GRXoNPsXJtLBZ9faKyJQUfitd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feat-AccomodationInfo/jh",
@@ -76,27 +74,33 @@
 =======
 
     "Application.ItinerariesView.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-<<<<<<< HEAD
-    "git-widget-placeholder": "dev",
-
 =======
+    "Application.Main.executor": "Run",
+>>>>>>> fb6cb7dcac2e0e8ab57a9d9ec2a247eb6aee0fa4
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feat-itineraries/hw",
+<<<<<<< HEAD
 >>>>>>> 479c447 (add service2)
     "kotlin-language-version-configured": "true"
 >>>>>>> 40d5a1fe78a98e8f971a71de6781ec9b8932dddd
+=======
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+>>>>>>> fb6cb7dcac2e0e8ab57a9d9ec2a247eb6aee0fa4
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="" />
-      <created>1755065729288</created>
+      <changelist id="c9cbd3c1-5d1c-4961-bf61-8aa686ccff28" name="Changes" comment="" />
+      <created>1755148464331</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1755065729288</updated>
+      <updated>1755148464331</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
       <created>1755065752886</created>
@@ -124,34 +128,16 @@
 >>>>>>> 40d5a1fe78a98e8f971a71de6781ec9b8932dddd
     </task>
     <option name="localTasksCounter" value="3" />
+=======
+>>>>>>> fb6cb7dcac2e0e8ab57a9d9ec2a247eb6aee0fa4
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="first commit" />
-    <MESSAGE value="add src" />
-    <option name="LAST_COMMIT_MESSAGE" value="add src" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Itineraries/ItinerariesController.java</url>
-          <line>18</line>
-          <properties class="Itineraries.ItinerariesController" method="run">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Itineraries/Itinerary.java</url>
+          <line>46</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

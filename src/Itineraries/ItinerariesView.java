@@ -28,4 +28,8 @@ public class ItinerariesView {
     public void showInvalidType() {
         System.out.println("잘못된 여정 타입입니다. A 또는 M을 입력해주세요.");
     }
+
+    public void printItineraries(String tripId){
+
+    }
 }
