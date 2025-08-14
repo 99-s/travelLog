@@ -22,4 +22,12 @@ public class TripModel {
     public void addItinerary(Itinerary itinerary) {
         itineraries.add(itinerary);
     }
+
+    public int getTripId() {
+        return tripId;
+    }
+
+    public String getTripIdAsString() {
+        return String.valueOf(tripId);
+    }
 }
