@@ -1,2 +1,7 @@
-package Itineraries;public class ItinerariesService {
+package Itineraries;
+
+public class ItinerariesService {
+    private ItinerariesRepository itinerariesRepository;
+
+
 }
