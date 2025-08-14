@@ -9,12 +9,11 @@ public class Itinerary {
     private static int idCounter = 1;
     private String itineraryId;
     private String type;
+    private String tripId;
 
     public String getTripId() {
         return tripId;
     }
-
-    private String tripId;
 
     public String getItineraryId() {
         return itineraryId;

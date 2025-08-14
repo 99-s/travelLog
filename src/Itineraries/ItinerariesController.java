@@ -24,6 +24,9 @@ public class ItinerariesController {
             String type = itinerariesView.askItineraryType();
 
             switch (type) {
+                // 이거
+//                case "A" -> accommodationController.inputAccommodation(tripId);
+//                case "M" -> moveInfoController.inputMove(tripId);
                 default -> itinerariesView.showInvalidType();
             }
         }
