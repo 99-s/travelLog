@@ -5,7 +5,7 @@ import Itineraries.Itinerary;
 import java.util.Scanner;
 
 public class AccommodationInfoView {
-    public Itinerary inputAccommodationInfo() {
+    public AccommodationItinerary inputAccommodationInfo() {
         Scanner scan = new Scanner(System.in);
         System.out.println("도착지를 입력하세요(숙소명) : ");
         String accommodation = scan.nextLine();
@@ -14,7 +14,7 @@ public class AccommodationInfoView {
         System.out.println("체크아웃 시간을 입력하세요 : ");
         String check_out = scan.nextLine();
 
-        return Itinerary(accommodation, check_in, check_out);
+        return new AccommodationItinerary(accommodation, check_in, check_out);
     }
     public void printAccommodationInfo(AccommodationItinerary info) {
         System.out.println("숙소명 : " + info.getAccommodation());
