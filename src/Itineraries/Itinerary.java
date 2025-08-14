@@ -1,2 +1,3 @@
-package Itineraries;public class Itinerary {
+package Itineraries;
+public class Itinerary {
 }

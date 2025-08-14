@@ -1,2 +1,2 @@
-package AccomodationInfo;public class MoveInfo {
+package AccommodationInfo;public class MoveInfo {
 }

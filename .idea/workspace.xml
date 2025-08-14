@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationItinerary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AccomodationInfo/AccomodationInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AccomodationInfo/AccomodationInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Itineraries/Itinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/Itinerary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveInfo/MoveInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,7 +40,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "git-widget-placeholder": "feat-AccomodationInfo/jh",
     "kotlin-language-version-configured": "true",
     "node.js.selected.package.tslint": "(autodetect)"
   }
