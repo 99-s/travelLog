@@ -7,18 +7,18 @@
 
 
     <list default="true" id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="add src">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AccomodationInfo/AccomodationInfo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Itineraries/ItinerariesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Itineraries/ItinerariesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Itineraries/ItinerariesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesService.java" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/Itineraries/ItinerariesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Itineraries/Itinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Itineraries/Itinerary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MoveInfo/MoveInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfo.java" afterDir="false" />
 
+=======
+>>>>>>> 479c447 (add service2)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +62,12 @@
     "Application.ItinerariesView.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "dev",
 
+=======
+    "git-widget-placeholder": "feat-itineraries/hw",
+>>>>>>> 479c447 (add service2)
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
@@ -110,5 +114,20 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="add src" />
     <option name="LAST_COMMIT_MESSAGE" value="add src" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Itineraries/ItinerariesController.java</url>
+          <line>18</line>
+          <properties class="Itineraries.ItinerariesController" method="run">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

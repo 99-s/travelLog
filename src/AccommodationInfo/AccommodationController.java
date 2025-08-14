@@ -1,2 +1,4 @@
-package AccommodationInfo;public class AccommodationController {
+package AccommodationInfo;
+
+public class AccommodationController {
 }
