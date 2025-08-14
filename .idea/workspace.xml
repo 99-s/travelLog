@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfoView.java" afterDir="false" />
+    <list default="true" id="b78cdf99-d487-4ad1-9f84-ad72789ca6b2" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AccomodationInfo/AccomodationInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Itineraries/ItinerariesView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Itineraries/Itinerary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MoveInfo/MoveInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Trip/TripController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Trip/TripModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Trip/TripRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Trip/TripService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Trip/TripView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,12 +55,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feat-accomodation/mq",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/gimmingyu/Desktop/2025/신한 프디아 6기/backend/mini-project/travelLog"
+    "git-widget-placeholder": "feat-accomodation/mq 병합 중"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
