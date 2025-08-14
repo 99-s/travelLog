@@ -23,11 +23,10 @@ public class TripModel {
         itineraries.add(itinerary);
     }
 
-    public int getTripId() {
-        return tripId;
-    }
+    public int getTripId() { return tripId; }
+    public String getTripName() { return tripName; }
+    public String getStartDate() { return startDate; }
+    public String getEndDate() { return endDate; }
+    public List<Itinerary> getItineraries() { return itineraries; }
 
-    public String getTripIdAsString() {
-        return String.valueOf(tripId);
-    }
 }

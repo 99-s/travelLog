@@ -1,15 +1,14 @@
+
 package MoveInfo;
 
 public class MoveInfoController {
-
-    public void moveInfoControllerRun(){
+//    객체 생성 후 객체 리턴
+    public MoveItinerary moveInfoControllerRun(){
         MoveInfoView moveInfoView = new MoveInfoView();
-        MoveItinerary moveItinerary = moveInfoView.inputMoveInfo();
 
-//        이 moveInfoModel 을 service로 넘김
-//        service에서 itinerary Controller로 넘김
-//        Trip에 전달해주는 건가?
+        return moveInfoView.inputMoveInfo();
     }
 
-
 }
+
+
