@@ -30,6 +30,10 @@ public class TripRepository {
         return null;
     }
 
+    public boolean existsById(int id) {
+        return trips.stream().anyMatch(trip -> trip.getTripId() == id);
+    }
+
     public void saveTripAsJson(TripModel trip) {
         String folderPath = "data/itineraries";
 

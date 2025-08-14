@@ -14,7 +14,6 @@ public class HomeController {
         this.itinerariesController = itinerariesController;
     }
 
-
     public void start() {
         boolean running = true;
         while (running) {
@@ -22,8 +21,7 @@ public class HomeController {
 
             switch (menu) {
                 case 1:
-                    System.out.println("여행 기록 선택됨");
-                    // TODO: TripController 호출
+                    tripController.createTrip();
                     break;
                 case 2:
                     System.out.println("여정 기록 선택됨");
@@ -31,9 +29,7 @@ public class HomeController {
                     itinerariesController.recordItineraries();
                     break;
                 case 3:
-                    System.out.println("여행 조회 선택됨");
-                    // TODO: TripController 조회 기능 호출
-
+                    tripController.showTripsAndDetails();
                     break;
                 case 4:
                     System.out.println("여정 조회 선택됨");

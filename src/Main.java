@@ -28,7 +28,6 @@ public class Main {
         ItinerariesController itinerariesController = new ItinerariesController(itinerariesView,accommodationController,moveInfoController,itinerariesService);
         HomeController homeController = new HomeController(homeView, tripController, itinerariesController);
 
-
         homeController.start();
     }
 }

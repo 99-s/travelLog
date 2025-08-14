@@ -23,11 +23,6 @@ public class TripController {
         tripService.saveTripToJson(savedTrip);
     }
 
-    public void showAllTrips() {
-        List<TripModel> trips = tripService.getAllTrips();
-        tripView.printTripList(trips);
-    }
-
     public void showTripsAndDetails() {
         List<TripModel> trips = tripService.getAllTrips();
         tripView.printTripList(trips);
