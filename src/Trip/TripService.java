@@ -11,8 +11,8 @@ public class TripService {
         return tripRepository.save(title, startDate, endDate);
     }
 
-    public void saveTripsToJson(String filePath) {
-        tripRepository.saveJsonToFile(filePath);
+    public void saveTripToJson(TripModel trip) {
+        tripRepository.saveTripAsJson(trip);
     }
 
 }

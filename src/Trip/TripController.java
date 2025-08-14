@@ -12,12 +12,12 @@ public class TripController {
     public void createTrip() {
         TripModel tripInput = tripView.inputTripInfo();
 
-        tripService.createTrip(
+        TripModel savedTrip = tripService.createTrip(
                 tripInput.getTripName(),
                 tripInput.getStartDate(),
                 tripInput.getEndDate()
         );
 
-        tripService.saveTripsToJson("trips.json");
+        tripService.saveTripToJson(savedTrip);
     }
 }

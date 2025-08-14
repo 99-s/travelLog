@@ -1,6 +1,7 @@
 package Trip;
 
 import Itineraries.Itinerary;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,16 +15,6 @@ public class TripRepository {
         TripModel trip = new TripModel(nextId++, title, startDate, endDate);
         trips.add(trip);
         return trip;
-    }
-
-    private String toJson() {
-        StringBuilder sb = new StringBuilder("[\n");
-        for (TripModel trip : trips) {
-            sb.append(tripToJson(trip)).append(",\n");
-        }
-        if (!trips.isEmpty()) sb.setLength(sb.length() - 2); // 마지막 콤마 제거
-        sb.append("\n]");
-        return sb.toString();
     }
 
     private String tripToJson(TripModel trip) {
@@ -46,11 +37,21 @@ public class TripRepository {
         return sb.toString();
     }
 
-    public void saveJsonToFile(String filePath) {
-        try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(toJson());
+    public void saveTripAsJson(TripModel trip) {
+        String folderPath = "data/itineraries";
+
+        File folder = new File(folderPath);
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+
+        String fileName = folderPath + "/itinerary_" + trip.getTripId() + ".json";
+
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write(tripToJson(trip));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }
