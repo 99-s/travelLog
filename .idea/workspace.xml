@@ -15,8 +15,7 @@
       <change beforePath="$PROJECT_DIR$/src/Trip/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripController.java" afterDir="false" />
 
     <list default="true" id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trip/TripModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trip/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Trip/TripRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Trip/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Trip/TripView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripView.java" afterDir="false" />
@@ -59,14 +58,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-
+    "Application.Main.executor": "Run",
     "git-widget-placeholder": "feat-accomodation/mq",
     "애플리케이션.MoveInfoController.executor": "Run"
-
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feat-trip/yz",
     "kotlin-language-version-configured": "true"
-
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
