@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MoveInfoView {
     ItineraryInputValidator itineraryInputValidator = new ItineraryInputValidator();
 
-    public MoveItinerary inputMoveInfo(){
+    public MoveItinerary inputMoveInfo(String tripId){
         Scanner sc = new Scanner(System.in);
         System.out.println("@@@ 이동 정보 기록 @@@");
 
@@ -53,7 +53,7 @@ public class MoveInfoView {
 
         String arrival_time = buildTime(year, month, day, hour, minute);
 
-        return new MoveItinerary(departure_place, destination, departure_time, arrival_time);
+        return new MoveItinerary(tripId,departure_place, destination, departure_time, arrival_time);
     }
 
     public String buildTime(String year, String month, String day, String hour, String minute) {
