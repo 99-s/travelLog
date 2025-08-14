@@ -17,7 +17,6 @@ public class MoveItinerary extends Itinerary {
         this.arrival_time = arrival_time;
     }
 
-    // Getter (조회 시 View에서 출력하기 위해)
     public String getDeparture_place() {
         return departure_place;
     }
