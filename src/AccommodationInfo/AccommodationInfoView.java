@@ -1,7 +1,5 @@
 package AccommodationInfo;
 
-import Itineraries.Itinerary;
-
 import java.util.Scanner;
 
 public class AccommodationInfoView {
@@ -9,19 +7,32 @@ public class AccommodationInfoView {
         Scanner scan = new Scanner(System.in);
         System.out.println("도착지를 입력하세요(숙소명) : ");
         String accommodation = scan.nextLine();
-        System.out.println("체크인 시간을 입력하세요 : ");
-        String check_in = scan.nextLine();
-        System.out.println("체크아웃 시간을 입력하세요 : ");
-        String check_out = scan.nextLine();
+        System.out.println("체크인 시간을 입력하세요");
+        System.out.println("연도 : ");
+        String year = scan.nextLine();
+        System.out.println("월 : ");
+        String month = scan.nextLine();
+        System.out.println("일 : ");
+        String day= scan.nextLine();
+        System.out.println("시 : ");
+        String hour = scan.nextLine();
+        System.out.println("분 : ");
+        String minute = scan.nextLine();
+        String check_in = year+"-"+month+"-"+day+"T"+hour+":"+minute+":00";
 
+        System.out.println("체크아웃 시간을 입력하세요");
+        System.out.println("연도 : ");
+        year = scan.nextLine();
+        System.out.println("월 : ");
+        month = scan.nextLine();
+        System.out.println("일 : ");
+        day= scan.nextLine();
+        System.out.println("시 : ");
+        hour = scan.nextLine();
+        System.out.println("분 : ");
+        minute = scan.nextLine();
+        //예외처리
+        String check_out = year+"-"+month+"-"+day+"T"+hour+":"+minute+":00";
         return new AccommodationItinerary(accommodation, check_in, check_out);
     }
-    public void printAccommodationInfo(AccommodationItinerary info) {
-        System.out.println("숙소명 : " + info.getAccommodation());
-        System.out.println("체크인 : " + info.getCheckIn());
-        System.out.println("체크아웃 : " + info.getCheckOut());
-    }
 }
-//private String accommodation;
-//private String check_in;
-//private String check_out;

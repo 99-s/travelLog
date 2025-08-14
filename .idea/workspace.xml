@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef954828-bfeb-40a2-9e33-518bed07a911" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trip/TripModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trip/TripRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trip/TripService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Trip/TripView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trip/TripView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AccommodationInfo/AccommodationInfoView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveInfo/MoveItinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveInfo/MoveItinerary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +50,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feat-trip/yz",
-    "kotlin-language-version-configured": "true"
+    "git-widget-placeholder": "feat-AccomodationInfo/jh",
+    "kotlin-language-version-configured": "true",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -70,7 +72,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755065752886</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1755137737375</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755137737375</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

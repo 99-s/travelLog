@@ -13,6 +13,5 @@ public class MoveItinerary extends Itinerary {
         this.destination=destination;
         this.departure_time =departure_time;
         this.arrival_time = arrival_time;
-
     }
 }
