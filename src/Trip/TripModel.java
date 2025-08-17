@@ -3,16 +3,17 @@ package Trip;
 import Itineraries.Itinerary;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class TripModel {
-    private int tripId;
+    private String tripId;
     private String tripName;
     private String startDate;
     private String endDate;
     private List<Itinerary> itineraries;
 
-    public TripModel(int tripId, String tripName, String startDate, String endDate) {
-        this.tripId = tripId;
+    public TripModel(String tripName, String startDate, String endDate) {
+        this.tripId = UUID.randomUUID().toString();;
         this.tripName = tripName;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -23,7 +24,7 @@ public class TripModel {
         itineraries.add(itinerary);
     }
 
-    public int getTripId() { return tripId; }
+    public String getTripId() { return tripId; }
     public String getTripName() { return tripName; }
     public String getStartDate() { return startDate; }
     public String getEndDate() { return endDate; }
