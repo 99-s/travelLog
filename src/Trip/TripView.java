@@ -29,13 +29,13 @@ public class TripView {
         String endDay = sc.nextLine();
         String endDate = endYear + "-" + endMonth + "-" + endDay;
 
-        return new TripModel(0, title, startDate, endDate);
+        return new TripModel(title, startDate, endDate);
     }
 
-    public int inputTripId() {
+    public String inputTripId() {
         Scanner sc = new Scanner(System.in);
         System.out.print("상세 조회할 여행 ID를 입력하세요: ");
-        return sc.nextInt();
+        return sc.next();
     }
 
     public void printTripList(List<TripModel> trips) {

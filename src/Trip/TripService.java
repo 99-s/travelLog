@@ -9,8 +9,8 @@ public class TripService {
         this.tripRepository = tripRepository;
     }
 
-    public TripModel createTrip(String title, String startDate, String endDate) {
-        return tripRepository.save(title, startDate, endDate);
+    public TripModel createTrip(String tripId, String title, String startDate, String endDate) {
+        return tripRepository.save(tripId, title, startDate, endDate);
     }
 
     public void saveTripToJson(TripModel trip) {
@@ -21,7 +21,7 @@ public class TripService {
         return tripRepository.findAll();
     }
 
-    public TripModel getTripById(int tripId) {
+    public TripModel getTripById(String tripId) {
         return tripRepository.findById(tripId);
     }
 
