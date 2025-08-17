@@ -9,10 +9,9 @@ import java.util.List;
 
 public class TripRepository {
     private List<TripModel> trips = new ArrayList<>();
-    private int nextId = 1;
 
-    public TripModel save(String title, String startDate, String endDate) {
-        TripModel trip = new TripModel(nextId++, title, startDate, endDate);
+    public TripModel save(String tripId, String title, String startDate, String endDate) {
+        TripModel trip = new TripModel(title, startDate, endDate);
         trips.add(trip);
         return trip;
     }
@@ -21,17 +20,17 @@ public class TripRepository {
         return new ArrayList<>(trips);
     }
 
-    public TripModel findById(int tripId) {
+    public TripModel findById(String tripId) {
         for (TripModel trip : trips) {
-            if (trip.getTripId() == tripId) {
+            if (trip.getTripId().equals(tripId)) {
                 return trip;
             }
         }
         return null;
     }
 
-    public boolean existsById(int id) {
-        return trips.stream().anyMatch(trip -> trip.getTripId() == id);
+    public boolean existsById(String id) {
+        return trips.stream().anyMatch(trip -> trip.getTripId().equals(id));
     }
 
     public void saveTripAsJson(TripModel trip) {
@@ -42,7 +41,8 @@ public class TripRepository {
             folder.mkdirs();
         }
 
-        String fileName = folderPath + "/itinerary_" + trip.getTripId() + ".json";
+//        String fileName = folderPath + "/itinerary_" + trip.getTripId() + ".json";
+        String fileName = folderPath + "/itinerary.json";
 
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write(tripToJson(trip));
@@ -54,7 +54,7 @@ public class TripRepository {
     private String tripToJson(TripModel trip) {
         StringBuilder sb = new StringBuilder();
         sb.append("  {\n");
-        sb.append("    \"trip_id\": ").append(trip.getTripId()).append(",\n");
+        sb.append("    \"trip_id\": \"").append(trip.getTripId()).append("\",\n");
         sb.append("    \"trip_name\": \"").append(trip.getTripName()).append("\",\n");
         sb.append("    \"start_date\": \"").append(trip.getStartDate()).append("\",\n");
         sb.append("    \"end_date\": \"").append(trip.getEndDate()).append("\",\n");

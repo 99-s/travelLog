@@ -15,6 +15,7 @@ public class TripController {
         TripModel tripInput = tripView.inputTripInfo();
 
         TripModel savedTrip = tripService.createTrip(
+                tripInput.getTripId(),
                 tripInput.getTripName(),
                 tripInput.getStartDate(),
                 tripInput.getEndDate()
@@ -27,7 +28,7 @@ public class TripController {
         List<TripModel> trips = tripService.getAllTrips();
         tripView.printTripList(trips);
 
-        int tripId = tripView.inputTripId();
+        String tripId = tripView.inputTripId();
 
         TripModel trip = tripService.getTripById(tripId);
         if (trip == null) {
