@@ -1,23 +1,9 @@
   {
-    "trip_id": "857142c0-3909-46bc-b680-c0476aef658e",
-    "trip_name": "얼렁뚱땅 부산여행",
-    "start_date": "2020-5-3",
-    "end_date": "2020-5-5",
+    "trip_id": "e542df61-980b-4314-ba53-da4300fed204",
+    "trip_name": "hihi",
+    "start_date": "2023-3-3",
+    "end_date": "3032-3-4",
     "itineraries": [
-      {
-        "itinerary_id" : 1,
-        "departure_place" : "City A",
-        "destination" : "City B",
-        "departure_time" : "2023-07-15T10:00:00",
-        "arrival_time" : "2023-07-15T10:00:00",
-        "type": "move"
-      },
-      {
-        "itinerary_id" : 2,
-        "accommodation" : "하야트호텔",
-        "check_in" : "2023-07-15T12:00:00",
-        "check_out" : "2023-07-30T10:00:00",
-        "type": "accommodation"
-      }
+
     ]
   }
