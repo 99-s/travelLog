@@ -12,6 +12,13 @@ public class AccommodationItinerary extends Itinerary {
         this.check_out = check_out;
     }
 
+    public AccommodationItinerary(String itineraryId, String tripId, String accommodation, String check_in, String check_out) {
+        super(itineraryId, tripId, "accommodation");
+        this.accommodation = accommodation;
+        this.check_in = check_in;
+        this.check_out = check_out;
+    }
+
     public String getCheckIn() {
         return check_in;
     }

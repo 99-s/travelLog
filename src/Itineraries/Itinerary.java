@@ -109,6 +109,12 @@ public class Itinerary {
         this.type = type;
     }
 
+    public Itinerary(String itineraryId, String tripId, String type) {
+        this.itineraryId = itineraryId;
+        this.tripId = tripId;
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Itinerary{" +

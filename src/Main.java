@@ -20,7 +20,6 @@ public class Main {
         for (TripModel trip : DataLoader.loadTripsFromFolder("data/itineraries")) {
             TripModel savedTrip = tripRepository.save(trip.getTripId(), trip.getTripName(), trip.getStartDate(), trip.getEndDate());
             for (Itinerary it : trip.getItineraries()) {
-                System.out.println(it.toString());
                 itinerariesRepository.save(it);
             }
         }
