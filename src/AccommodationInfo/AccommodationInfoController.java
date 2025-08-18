@@ -1,11 +1,11 @@
 package AccommodationInfo;
 
+import Itineraries.Itinerary;
+
 public class AccommodationInfoController {
 
-    public AccommodationItinerary accommodationInfoControllerRun(String tripId){
-        AccommodationInfoView moveInfoView = new AccommodationInfoView();
-        return moveInfoView.inputAccommodationInfo(tripId);
+    public Itinerary accommodationInfoControllerRun(String tripId) {
+        AccommodationInfoView accommodationInfoView = new AccommodationInfoView();
+        return accommodationInfoView.inputAccommodationInfo(tripId);
     }
-
-
 }
