@@ -10,8 +10,9 @@ public class TripView {
         System.out.println("@@@ 여행기록 @@@");
 
         System.out.print("여행명 : ");
-        if (sc.hasNextLine()) sc.nextLine(); // 버퍼 비우기
+
         String title = sc.nextLine();
+
         while (title.isBlank()) {
             System.out.print("[오류] 여행명은 비워둘 수 없습니다. 다시 입력하세요: ");
             title = sc.nextLine();

@@ -44,6 +44,8 @@ public class ItinerariesView {
                 System.out.println("\"departure_time\": \"" + it.getDepartureTime() + "\",");
             if (it.getArrivalTime() != null)
                 System.out.println("\"arrival_time\": \"" + it.getArrivalTime() + "\",");
+            if( it. getAccommodation() != null)
+                System.out.println("\"accommodation\": \"" + it.getAccommodation() + "\",");
             if (it.getCheckIn() != null)
                 System.out.println("\"check_in\": \"" + it.getCheckIn() + "\",");
             if (it.getCheckOut() != null)
