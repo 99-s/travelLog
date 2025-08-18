@@ -1,21 +1,35 @@
 package Itineraries;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import Trip.TripModel;
+import Trip.TripRepository;
+
+import java.util.*;
 
 public class ItinerariesRepository {
     private Map<String, List<Itinerary>> db = new HashMap<>();
+    private TripRepository tripRepository;
 
-    // 여정 1개 저장
+    public ItinerariesRepository(TripRepository tripRepository) {
+        this.tripRepository = tripRepository;
+    }
+
+    // 여정 저장 (Trip에도 반영 + JSON 저장)
     public void save(Itinerary itinerary) {
         String tripId = itinerary.getTripId();
 
-        // 해당 tripId에 리스트가 없으면 새로 만들고, 있다면 그 리스트에 add
+        // 메모리 DB 저장
         db.computeIfAbsent(tripId, k -> new ArrayList<>()).add(itinerary);
+
+        // TripRepository 반영
+        TripModel trip = tripRepository.findById(tripId);
+        if (trip != null) {
+            trip.getItineraries().add(itinerary);
+            System.out.println(trip.getItineraries());
+            tripRepository.saveTripAsJson(trip);
+        }
     }
-    public List<Itinerary> findAll(String tripId){
+
+    public List<Itinerary> findAll(String tripId) {
         return db.getOrDefault(tripId, new ArrayList<>());
     }
 }

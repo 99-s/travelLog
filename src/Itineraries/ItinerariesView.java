@@ -34,23 +34,25 @@ public class ItinerariesView {
         System.out.println("@@@ " + tripId + "의 전체 여정 목록 @@@");
 
         for (Itinerary it : itineraries) {
-            System.out.println("{");
-            System.out.println("\"itinerary_id\": " + it.getItineraryId() + ",");
+            System.out.println("=== 여정 정보 ===");
+            System.out.println("ID: " + it.getItineraryId());
             if (it.getDeparturePlace() != null)
-                System.out.println("\"departure_place\": \"" + it.getDeparturePlace() + "\",");
+                System.out.println("출발지: " + it.getDeparturePlace());
             if (it.getDestination() != null)
-                System.out.println("\"destination\": \"" + it.getDestination() + "\",");
+                System.out.println("목적지: " + it.getDestination());
             if (it.getDepartureTime() != null)
-                System.out.println("\"departure_time\": \"" + it.getDepartureTime() + "\",");
+                System.out.println("출발 시간: " + it.getDepartureTime());
             if (it.getArrivalTime() != null)
-                System.out.println("\"arrival_time\": \"" + it.getArrivalTime() + "\",");
-            if( it. getAccommodation() != null)
-                System.out.println("\"accommodation\": \"" + it.getAccommodation() + "\",");
+                System.out.println("도착 시간: " + it.getArrivalTime());
+            if (it.getAccommodation() != null)
+                System.out.println("숙소: " + it.getAccommodation());
             if (it.getCheckIn() != null)
-                System.out.println("\"check_in\": \"" + it.getCheckIn() + "\",");
+                System.out.println("체크인: " + it.getCheckIn());
             if (it.getCheckOut() != null)
-                System.out.println("\"check_out\": \"" + it.getCheckOut() + "\"");
-            System.out.println("},");
+                System.out.println("체크아웃: " + it.getCheckOut());
+            System.out.println();
         }
+
     }
+
 }

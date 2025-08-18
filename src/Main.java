@@ -1,4 +1,3 @@
-import AccommodationInfo.AccommodationController;
 import AccommodationInfo.AccommodationInfoController;
 import AccommodationInfo.AccommodationInfoView;
 import Home.HomeController;
@@ -15,8 +14,7 @@ public class Main {
 
         TripView tripView = new TripView();
         TripRepository tripRepository = new TripRepository();
-        ItinerariesRepository itinerariesRepository = new ItinerariesRepository();
-
+        ItinerariesRepository itinerariesRepository = new ItinerariesRepository(tripRepository);
         for (TripModel trip : DataLoader.loadTripsFromFolder("data/itineraries")) {
             TripModel savedTrip = tripRepository.save(trip.getTripId(), trip.getTripName(), trip.getStartDate(), trip.getEndDate());
             for (Itinerary it : trip.getItineraries()) {
@@ -24,7 +22,7 @@ public class Main {
             }
         }
 
-        TripService tripService = new TripService(tripRepository);
+        TripService tripService = new TripService(tripRepository, itinerariesRepository);
         TripController tripController = new TripController(tripView, tripService);
         AccommodationInfoController accommodationInfoController = new AccommodationInfoController();
         MoveInfoController moveInfoController = new MoveInfoController();
@@ -34,7 +32,7 @@ public class Main {
         ItinerariesView itinerariesView = new ItinerariesView();
 //        ItinerariesRepository itinerariesRepository = new ItinerariesRepository();
         ItinerariesService itinerariesService = new ItinerariesService(itinerariesRepository);
-        ItinerariesController itinerariesController = new ItinerariesController(itinerariesView,accommodationInfoController,moveInfoController,accommodationInfoView,moveInfoView,itinerariesService);
+        ItinerariesController itinerariesController = new ItinerariesController(itinerariesView,accommodationInfoController,moveInfoController,accommodationInfoView,moveInfoView,itinerariesService, tripService);
         HomeController homeController = new HomeController(homeView, tripController, itinerariesController);
 
         homeController.start();
