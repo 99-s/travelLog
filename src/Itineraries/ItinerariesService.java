@@ -1,5 +1,8 @@
 package Itineraries;
 
+import Trip.TripRepository;
+import Trip.TripService;
+
 import java.util.List;
 
 public class ItinerariesService {
@@ -18,5 +21,6 @@ public class ItinerariesService {
     //여정 저장
     public void saveItinerary(Itinerary itinerary) {
         repository.save(itinerary);
+
     }
 }

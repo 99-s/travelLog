@@ -20,7 +20,9 @@ public class Main {
 
         TripView tripView = new TripView();
         TripRepository tripRepository = new TripRepository();
-        TripService tripService = new TripService(tripRepository);
+        ItinerariesRepository itinerariesRepository = new ItinerariesRepository(tripRepository);
+
+        TripService tripService = new TripService(tripRepository, itinerariesRepository);
         TripController tripController = new TripController(tripView, tripService);
         AccommodationInfoController accommodationInfoController = new AccommodationInfoController();
         MoveInfoController moveInfoController = new MoveInfoController();
@@ -28,7 +30,6 @@ public class Main {
         MoveInfoView moveInfoView = new MoveInfoView();
 
         ItinerariesView itinerariesView = new ItinerariesView();
-        ItinerariesRepository itinerariesRepository = new ItinerariesRepository();
         ItinerariesService itinerariesService = new ItinerariesService(itinerariesRepository);
         ItinerariesController itinerariesController = new ItinerariesController(itinerariesView,accommodationInfoController,moveInfoController,accommodationInfoView,moveInfoView,itinerariesService);
         HomeController homeController = new HomeController(homeView, tripController, itinerariesController);
