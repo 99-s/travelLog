@@ -6,6 +6,8 @@ import AccommodationInfo.AccommodationItinerary;
 import MoveInfo.MoveInfoController;
 import MoveInfo.MoveInfoView;
 import MoveInfo.MoveItinerary;
+import utils.StringValidator;
+import Trip.TripService;
 
 import java.util.List;
 
@@ -14,91 +16,88 @@ public class ItinerariesController {
     private final AccommodationInfoController accommodationInfoController;
     private final MoveInfoController moveInfoController;
     private final ItinerariesService itinerariesService;
-    private MoveItinerary moveItinerary;
-    private MoveInfoView moveInfoView;
-    private AccommodationItinerary accommodationItinerary;
-    private AccommodationInfoView accommodationInfoView;
+    private final AccommodationInfoView accommodationInfoView;
+    private final MoveInfoView moveInfoView;
+    private final TripService tripService;
 
     public ItinerariesController(ItinerariesView itinerariesView,
                                  AccommodationInfoController accommodationInfoController,
                                  MoveInfoController moveInfoController,
                                  AccommodationInfoView accommodationInfoView,
                                  MoveInfoView moveInfoView,
-                                 ItinerariesService itinerariesService) {
+                                 ItinerariesService itinerariesService,
+                                 TripService tripService) {
         this.itinerariesView = itinerariesView;
         this.accommodationInfoController = accommodationInfoController;
         this.moveInfoController = moveInfoController;
         this.accommodationInfoView = accommodationInfoView;
         this.moveInfoView = moveInfoView;
         this.itinerariesService = itinerariesService;
+        this.tripService = tripService;
     }
 
-
-    //여정조회
     public void showAllItineraries() {
-        String tripId = itinerariesView.askTripId(); // 조회할 여행 ID 입력
+        String tripId = getValidatedTripId();
+        if (tripId == null) return;
+        
         List<Itinerary> itineraries = itinerariesService.getItinerariesByTrip(tripId);
 
         if (itineraries.isEmpty()) {
            System.out.println("해당 여행의 여정이 없습니다.");
         } else {
+            System.out.println("=== " + tripId + " 여행의 여정 목록 ===");
             itinerariesView.printItineraries(tripId,itineraries);
         }
     }
 
     public void recordItineraries() {
         itinerariesView.printWelcomeMessage();
-        String tripId = itinerariesView.askTripId();
+        String tripId = getValidatedTripId();
+        if (tripId == null) return;
 
         while (itinerariesView.askYesNo("여정을 입력하시겠습니까?")) {
-            Itinerary itinerary = new Itinerary(tripId, "");
-            boolean hasMove = false;
-            boolean hasStay = false;
-
-            // 이동 정보 입력 여부 확인
-            if (itinerariesView.askYesNo("이동 정보를 입력하시겠습니까?")) {
-                MoveItinerary moveItinerary = moveInfoView.inputMoveInfo(tripId);
-                if (moveItinerary != null) {
-                    itinerary.setDeparturePlace(moveItinerary.getDeparturePlace());
-                    itinerary.setDestination(moveItinerary.getDestination());
-                    itinerary.setDepartureTime(moveItinerary.getDepartureTime());
-                    itinerary.setArrivalTime(moveItinerary.getArrivalTime());
-                    hasMove = true;
-                }
-            }
-
-            // 숙박 정보 입력 여부 확인
-            if (itinerariesView.askYesNo("숙박 정보를 입력하시겠습니까?")) {
-                AccommodationItinerary accItinerary = accommodationInfoView.inputAccommodationInfo(tripId);
-                if (accItinerary != null) {
-                    itinerary.setAccommodation(accItinerary.getAccommodation());
-                    itinerary.setCheckIn(accItinerary.getCheckIn());
-                    itinerary.setCheckOut(accItinerary.getCheckOut());
-                    hasStay = true;
-                }
-            }
-
-            // 여정 타입 설정 (M, A, MA 가능)
-            if (hasMove && hasStay) {
-                itinerary.setType("MA"); // 혼합도 표시하고 싶다면 이렇게
-            } else if (hasMove) {
-                itinerary.setType("M");
-            } else if (hasStay) {
-                itinerary.setType("A");
-            }
-
-            // 정보가 하나라도 있으면 저장
-            if (hasMove || hasStay) {
-                itinerariesService.saveItinerary(itinerary);
-            } else {
-                System.out.println("입력된 여정 정보가 없어 저장되지 않았습니다.");
+            String type = itinerariesView.askItineraryType();
+            
+            switch (type) {
+                case "A" -> recordAccommodationItinerary(tripId);
+                case "M" -> recordMoveItinerary(tripId);
+                default -> itinerariesView.showInvalidType();
             }
         }
     }
+    
+    private void recordAccommodationItinerary(String tripId) {
+        AccommodationItinerary accommodationItinerary = accommodationInfoView.inputAccommodationInfo(tripId);
+        if (accommodationItinerary != null) {
+            itinerariesService.saveItinerary(accommodationItinerary);
+        }
+    }
+    
+    private void recordMoveItinerary(String tripId) {
+        MoveItinerary moveItinerary = moveInfoView.inputMoveInfo(tripId);
+        if (moveItinerary != null) {
+            itinerariesService.saveItinerary(moveItinerary);
+        }
+    }
 
-
-
-    private boolean hasData(Itinerary itinerary) {
-        return itinerary.getDeparturePlace() != null || itinerary.getCheckIn() != null;
+    private String getValidatedTripId() {
+        while (true) {
+            try {
+                String tripId = itinerariesView.askTripId();
+                StringValidator.validateNotEmpty(tripId, "여행 ID");
+                
+                // 여행 ID가 실제로 존재하는지 검증
+                if (tripService.getTripById(tripId) == null) {
+                    throw new IllegalArgumentException("존재하지 않는 여행 ID입니다. 먼저 여행을 생성해주세요.");
+                }
+                
+                return tripId;
+            } catch (Exception e) {
+                System.out.println("[오류] " + e.getMessage());
+                if (!itinerariesView.askYesNo("다시 입력하시겠습니까?")) {
+                    return null;
+                }
+            }
+        }
     }
 }
