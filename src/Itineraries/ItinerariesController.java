@@ -71,6 +71,7 @@ public class ItinerariesController {
             if (itinerariesView.askYesNo("숙박 정보를 입력하시겠습니까?")) {
                 AccommodationItinerary accItinerary = accommodationInfoView.inputAccommodationInfo(tripId);
                 if (accItinerary != null) {
+                    itinerary.setAccommodation(accItinerary.getAccommodation());
                     itinerary.setCheckIn(accItinerary.getCheckIn());
                     itinerary.setCheckOut(accItinerary.getCheckOut());
                     hasStay = true;
