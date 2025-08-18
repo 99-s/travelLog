@@ -108,4 +108,25 @@ public class Itinerary {
         this.tripId = tripId;
         this.type = type;
     }
+
+    public Itinerary(String itineraryId, String tripId, String type) {
+        this.itineraryId = itineraryId;
+        this.tripId = tripId;
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Itinerary{" +
+                "itineraryId='" + itineraryId + '\'' +
+                ", tripId='" + tripId + '\'' +
+                ", type='" + type + '\'' +
+                ", departurePlace='" + departurePlace + '\'' +
+                ", destination='" + destination + '\'' +
+                ", departureTime='" + departureTime + '\'' +
+                ", arrivalTime='" + arrivalTime + '\'' +
+                ", checkInTime='" + checkInTime + '\'' +
+                ", checkOutTime='" + checkOutTime + '\'' +
+                '}';
+    }
 }

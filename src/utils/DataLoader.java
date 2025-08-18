@@ -43,7 +43,7 @@ public class DataLoader {
             String startDate = extractValue(json, "start_date");
             String endDate = extractValue(json, "end_date");
 
-            TripModel trip = new TripModel(tripName, startDate, endDate);
+            TripModel trip = new TripModel(tripId, tripName, startDate, endDate);
 
             // itineraries 배열 파싱
             String itinerariesJson = extractArray(json, "itineraries");
@@ -62,64 +62,75 @@ public class DataLoader {
     }
 
     private static String extractValue(String json, String key) {
-        String pattern = "\"" + key + "\":";
+        String pattern = "\"" + key + "\"";
         int start = json.indexOf(pattern);
         if (start == -1) return null;
 
-        start += pattern.length();
-        int firstQuote = json.indexOf("\"", start);
-        int secondQuote = json.indexOf("\"", firstQuote + 1);
+        int colon = json.indexOf(":", start);
+        if (colon == -1) return null;
 
+        int firstQuote = json.indexOf("\"", colon);
+        int secondQuote = json.indexOf("\"", firstQuote + 1);
         if (firstQuote == -1 || secondQuote == -1) return null;
 
         return json.substring(firstQuote + 1, secondQuote);
     }
 
+
     private static String extractArray(String json, String key) {
-        String pattern = "\"" + key + "\":[";
+        String pattern = "\"" + key + "\""; // key 위치만 찾기
         int start = json.indexOf(pattern);
         if (start == -1) return null;
 
-        start += pattern.length();
-        int end = json.indexOf("]", start);
-        return json.substring(start, end + 1);
+        int colon = json.indexOf(":", start);
+        if (colon == -1) return null;
+
+        int arrayStart = json.indexOf("[", colon);
+        int arrayEnd = json.indexOf("]", arrayStart);
+        if (arrayStart == -1 || arrayEnd == -1) return null;
+        return json.substring(arrayStart, arrayEnd + 1);
     }
+
 
     private static Itinerary parseItinerary(String json, String tripId) {
         String type = extractValue(json, "type");
-
+        String itineraryId = extractValue(json, "itinerary_id");
         if ("move".equals(type)) {
             String departurePlace = extractValue(json, "departure_place");
             String destination = extractValue(json, "destination");
             String departureTime = extractValue(json, "departure_time");
             String arrivalTime = extractValue(json, "arrival_time");
 
-            return new MoveItinerary(tripId, departurePlace, destination, departureTime, arrivalTime);
+            return new MoveItinerary(itineraryId, tripId, departurePlace, destination, departureTime, arrivalTime);
         }
         else if ("accommodation".equals(type)) {
             String accommodation = extractValue(json, "accommodation");
             String checkIn = extractValue(json, "check_in");
             String checkOut = extractValue(json, "check_out");
 
-            return new AccommodationItinerary(tripId, accommodation, checkIn, checkOut);
+            return new AccommodationItinerary(itineraryId, tripId, accommodation, checkIn, checkOut);
         }
         else {
             // 기본 Itinerary (예: type만 있는 경우)
-            return new Itinerary(tripId, type);
+            return new Itinerary(itineraryId, tripId, type);
         }
     }
     private static List<Itinerary> parseItineraries(String itinerariesJson, String tripId) {
         List<Itinerary> itineraries = new ArrayList<>();
-
         if (itinerariesJson == null || itinerariesJson.isEmpty()) return itineraries;
 
-        String[] items = itinerariesJson.split("\\},\\{");
-
-        for (String item : items) {
+        // 배열 안 객체들을 분리
+        String trimmed = itinerariesJson.substring(1, itinerariesJson.length() - 1); // [ ... ] 제거
+        String[] items = trimmed.split("\\},\\{");
+        for (int i = 0; i < items.length; i++) {
+            String item = items[i];
+            if (i != 0) item = "{" + item;
+            if (i != items.length - 1) item = item + "}";
             Itinerary it = parseItinerary(item, tripId);
             if (it != null) itineraries.add(it);
         }
-
         return itineraries;
     }
+
 }
+

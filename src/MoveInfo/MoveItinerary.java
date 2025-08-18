@@ -17,6 +17,15 @@ public class MoveItinerary extends Itinerary {
         this.arrivalTime = arrivalTime;
     }
 
+    public MoveItinerary(String itineraryId, String tripId, String departurePlace, String destination,
+                         String departureTime, String arrivalTime) {
+        super(itineraryId, tripId, "move");
+        this.departurePlace = departurePlace;
+        this.destination = destination;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+    }
+
     public String getDeparturePlace() {
         return departurePlace;
     }

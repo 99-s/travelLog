@@ -18,7 +18,7 @@ public class Main {
         for (TripModel trip : DataLoader.loadTripsFromFolder("data/itineraries")) {
             TripModel savedTrip = tripRepository.save(trip.getTripId(), trip.getTripName(), trip.getStartDate(), trip.getEndDate());
             for (Itinerary it : trip.getItineraries()) {
-                savedTrip.addItinerary(it);
+                itinerariesRepository.save(it);
             }
         }
 
@@ -30,7 +30,9 @@ public class Main {
         MoveInfoView moveInfoView = new MoveInfoView();
 
         ItinerariesView itinerariesView = new ItinerariesView();
-        ItinerariesController itinerariesController = new ItinerariesController(itinerariesView, accommodationInfoController, moveInfoController, accommodationInfoView, moveInfoView, itinerariesService, tripService);
+//        ItinerariesRepository itinerariesRepository = new ItinerariesRepository();
+        ItinerariesService itinerariesService = new ItinerariesService(itinerariesRepository);
+        ItinerariesController itinerariesController = new ItinerariesController(itinerariesView,accommodationInfoController,moveInfoController,accommodationInfoView,moveInfoView,itinerariesService, tripService);
         HomeController homeController = new HomeController(homeView, tripController, itinerariesController);
 
         homeController.start();
