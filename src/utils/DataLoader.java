@@ -43,7 +43,7 @@ public class DataLoader {
             String startDate = extractValue(json, "start_date");
             String endDate = extractValue(json, "end_date");
 
-            TripModel trip = new TripModel(tripName, startDate, endDate);
+            TripModel trip = new TripModel(tripId, tripName, startDate, endDate);
 
             // itineraries 배열 파싱
             String itinerariesJson = extractArray(json, "itineraries");
@@ -76,14 +76,19 @@ public class DataLoader {
     }
 
     private static String extractArray(String json, String key) {
-        String pattern = "\"" + key + "\":[";
+        String pattern = "\"" + key + "\""; // key 위치만 찾기
         int start = json.indexOf(pattern);
         if (start == -1) return null;
 
-        start += pattern.length();
-        int end = json.indexOf("]", start);
-        return json.substring(start, end + 1);
+        int colon = json.indexOf(":", start);
+        if (colon == -1) return null;
+
+        int arrayStart = json.indexOf("[", colon);
+        int arrayEnd = json.indexOf("]", arrayStart);
+        if (arrayStart == -1 || arrayEnd == -1) return null;
+        return json.substring(arrayStart, arrayEnd + 1);
     }
+
 
     private static Itinerary parseItinerary(String json, String tripId) {
         String type = extractValue(json, "type");
@@ -110,16 +115,21 @@ public class DataLoader {
     }
     private static List<Itinerary> parseItineraries(String itinerariesJson, String tripId) {
         List<Itinerary> itineraries = new ArrayList<>();
-
         if (itinerariesJson == null || itinerariesJson.isEmpty()) return itineraries;
 
-        String[] items = itinerariesJson.split("\\},\\{");
+        // 배열 안 객체들을 분리
+        String trimmed = itinerariesJson.substring(1, itinerariesJson.length() - 1); // [ ... ] 제거
+        String[] items = trimmed.split("\\},\\{");
 
-        for (String item : items) {
+        for (int i = 0; i < items.length; i++) {
+            String item = items[i];
+            if (i != 0) item = "{" + item;          // 첫 객체 제외 앞에 { 추가
+            if (i != items.length - 1) item = item + "}"; // 마지막 객체 제외 뒤에 } 추가
             Itinerary it = parseItinerary(item, tripId);
             if (it != null) itineraries.add(it);
         }
-
         return itineraries;
     }
+
 }
+

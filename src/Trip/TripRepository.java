@@ -9,9 +9,8 @@ import java.util.List;
 public class TripRepository {
     private List<TripModel> trips = new ArrayList<>();
 
-    //json 파일 저장 파트
     public TripModel save(String tripId, String title, String startDate, String endDate) {
-        TripModel trip = new TripModel(title, startDate, endDate);
+        TripModel trip = new TripModel(tripId, title, startDate, endDate);
         trips.add(trip);
         return trip;
     }

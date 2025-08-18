@@ -12,6 +12,14 @@ public class TripModel {
     private String endDate;
     private List<Itinerary> itineraries;
 
+    public TripModel(String tripId, String tripName, String startDate, String endDate) {
+        this.tripId = tripId;
+        this.tripName = tripName;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.itineraries = new ArrayList<>();
+    }
+
     public TripModel(String tripName, String startDate, String endDate) {
         this.tripId = UUID.randomUUID().toString();;
         this.tripName = tripName;
@@ -30,4 +38,14 @@ public class TripModel {
     public String getEndDate() { return endDate; }
     public List<Itinerary> getItineraries() { return itineraries; }
 
+    @Override
+    public String toString() {
+        return "TripModel{" +
+                "tripId='" + tripId + '\'' +
+                ", tripName='" + tripName + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", itineraries=" + itineraries +
+                '}';
+    }
 }
