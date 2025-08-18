@@ -1,5 +1,6 @@
 package Itineraries;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class ItinerariesView {
@@ -29,7 +30,25 @@ public class ItinerariesView {
         System.out.println("잘못된 여정 타입입니다. A 또는 M을 입력해주세요.");
     }
 
-    public void printItineraries(String tripId){
+    public void printItineraries(String tripId, List<Itinerary> itineraries) {
+        System.out.println("@@@ " + tripId + "의 전체 여정 목록 @@@");
 
+        for (Itinerary it : itineraries) {
+            System.out.println("{");
+            System.out.println("\"itinerary_id\": " + it.getItineraryId() + ",");
+            if (it.getDeparturePlace() != null)
+                System.out.println("\"departure_place\": \"" + it.getDeparturePlace() + "\",");
+            if (it.getDestination() != null)
+                System.out.println("\"destination\": \"" + it.getDestination() + "\",");
+            if (it.getDepartureTime() != null)
+                System.out.println("\"departure_time\": \"" + it.getDepartureTime() + "\",");
+            if (it.getArrivalTime() != null)
+                System.out.println("\"arrival_time\": \"" + it.getArrivalTime() + "\",");
+            if (it.getCheckIn() != null)
+                System.out.println("\"check_in\": \"" + it.getCheckIn() + "\",");
+            if (it.getCheckOut() != null)
+                System.out.println("\"check_out\": \"" + it.getCheckOut() + "\"");
+            System.out.println("},");
+        }
     }
 }

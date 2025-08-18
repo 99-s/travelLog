@@ -11,6 +11,7 @@ public class ItinerariesService {
     }
     // 특정 여행(trip)에 속한 모든 여정 조회
     public List<Itinerary> getItinerariesByTrip(String tripId) {
+
         return repository.findAll(tripId);
     }
 
