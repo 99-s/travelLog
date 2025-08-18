@@ -92,28 +92,47 @@ public class DataLoader {
     }
 
 
+//    private static Itinerary parseItinerary(String json, String tripId) {
+//        String type = extractValue(json, "type");
+//        String itineraryId = extractValue(json, "itinerary_id");
+//        if ("move".equals(type)) {
+//            String departurePlace = extractValue(json, "departure_place");
+//            String destination = extractValue(json, "destination");
+//            String departureTime = extractValue(json, "departure_time");
+//            String arrivalTime = extractValue(json, "arrival_time");
+//
+//            return new MoveItinerary(itineraryId, tripId, departurePlace, destination, departureTime, arrivalTime);
+//        }
+//        else if ("accommodation".equals(type)) {
+//            String accommodation = extractValue(json, "accommodation");
+//            String checkIn = extractValue(json, "check_in");
+//            String checkOut = extractValue(json, "check_out");
+//
+//            return new AccommodationItinerary(itineraryId, tripId, accommodation, checkIn, checkOut);
+//        }
+//        else {
+//            // 기본 Itinerary (예: type만 있는 경우)
+//            return new Itinerary(itineraryId, tripId, type);
+//        }
+//    }
+
     private static Itinerary parseItinerary(String json, String tripId) {
-        String type = extractValue(json, "type");
         String itineraryId = extractValue(json, "itinerary_id");
-        if ("move".equals(type)) {
-            String departurePlace = extractValue(json, "departure_place");
-            String destination = extractValue(json, "destination");
-            String departureTime = extractValue(json, "departure_time");
-            String arrivalTime = extractValue(json, "arrival_time");
 
-            return new MoveItinerary(itineraryId, tripId, departurePlace, destination, departureTime, arrivalTime);
-        }
-        else if ("accommodation".equals(type)) {
-            String accommodation = extractValue(json, "accommodation");
-            String checkIn = extractValue(json, "check_in");
-            String checkOut = extractValue(json, "check_out");
+        String departurePlace = extractValue(json, "departure_place");
+        String destination = extractValue(json, "destination");
+        String departureTime = extractValue(json, "departure_time");
+        String arrivalTime = extractValue(json, "arrival_time");
 
+        String accommodation = extractValue(json, "accommodation");
+        String checkIn = extractValue(json, "check_in");
+        String checkOut = extractValue(json, "check_out");
+        if(departurePlace==null)
             return new AccommodationItinerary(itineraryId, tripId, accommodation, checkIn, checkOut);
-        }
-        else {
-            // 기본 Itinerary (예: type만 있는 경우)
-            return new Itinerary(itineraryId, tripId, type);
-        }
+        else if(accommodation==null)
+            return new MoveItinerary(itineraryId, tripId, departurePlace, destination, departureTime, arrivalTime);
+        else
+            return new Itinerary(itineraryId, tripId);
     }
     private static List<Itinerary> parseItineraries(String itinerariesJson, String tripId) {
         List<Itinerary> itineraries = new ArrayList<>();
