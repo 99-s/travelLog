@@ -1,18 +1,13 @@
-
+import AccommodationInfo.AccommodationController;
 import AccommodationInfo.AccommodationInfoController;
 import AccommodationInfo.AccommodationInfoView;
 import Home.HomeController;
 import Home.HomeView;
-import Itineraries.ItinerariesController;
-import Itineraries.ItinerariesRepository;
-import Itineraries.ItinerariesService;
-import Itineraries.ItinerariesView;
+import Itineraries.*;
 import MoveInfo.MoveInfoController;
 import MoveInfo.MoveInfoView;
-import Trip.TripController;
-import Trip.TripRepository;
-import Trip.TripService;
-import Trip.TripView;
+import Trip.*;
+import utils.DataLoader;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,6 +15,14 @@ public class Main {
 
         TripView tripView = new TripView();
         TripRepository tripRepository = new TripRepository();
+
+        for (TripModel trip : DataLoader.loadTripsFromFolder("data/itineraries")) {
+            TripModel savedTrip = tripRepository.save(trip.getTripId(), trip.getTripName(), trip.getStartDate(), trip.getEndDate());
+            for (Itinerary it : trip.getItineraries()) {
+                savedTrip.addItinerary(it);
+            }
+        }
+
         TripService tripService = new TripService(tripRepository);
         TripController tripController = new TripController(tripView, tripService);
         AccommodationInfoController accommodationInfoController = new AccommodationInfoController();
