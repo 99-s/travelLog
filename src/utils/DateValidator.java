@@ -64,7 +64,7 @@ public class DateValidator {
 
     // 시작시간이 종료시간보다 이전인지 검증 (선택적)
     public static void validateTimeRange(String startTime, String endTime, boolean strict) {
-        if (!strict) return; // strict가 false면 검증하지 않음
+        if (!strict) return;
         
         LocalDateTime start = LocalDateTime.parse(startTime, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
         LocalDateTime end = LocalDateTime.parse(endTime, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
