@@ -2,6 +2,7 @@ package Home;
 
 import Itineraries.ItinerariesController;
 import Trip.TripController;
+import utils.InvalidMenuSelectionException;
 
 public class HomeController {
     private HomeView homeView;
@@ -17,32 +18,24 @@ public class HomeController {
     public void start() {
         boolean running = true;
         while (running) {
-            int menu = homeView.showMenuAndGetSelection();
+            try {
+                int menu = homeView.showMenuAndGetSelection();
 
-            switch (menu) {
-                case 1:
-                    tripController.createTrip();
-                    break;
-                case 2:
-                    System.out.println("여정 기록 선택됨");
-                    // TODO: ItinerariesController 호출
-                    itinerariesController.recordItineraries();
-                    break;
-                case 3:
-                    tripController.showTripsAndDetails();
-                    break;
-                case 4:
-                    System.out.println("여정 조회 선택됨");
-                    // TODO: ItinerariesController 조회 기능 호출
-                    itinerariesController.showAllItineraries();
-
-                    break;
-                case 5:
-                    System.out.println("프로그램 종료");
-                    running = false;
-                    break;
-                default:
-                    System.out.println("올바른 메뉴 번호를 입력하세요.");
+                switch (menu) {
+                    case 1 -> tripController.createTrip();
+                    case 2 -> itinerariesController.recordItineraries();
+                    case 3 -> tripController.showTripsAndDetails();
+                    case 4 -> itinerariesController.showAllItineraries();
+                    case 5 -> {
+                        System.out.println("프로그램 종료");
+                        running = false;
+                    }
+                    default -> System.out.println("올바른 메뉴 번호를 입력하세요.");
+                }
+            } catch (InvalidMenuSelectionException e) {
+                System.out.println("[입력 오류] " + e.getMessage());
+            } catch (Exception e) {
+                System.out.println("[시스템 오류] " + e.getMessage());
             }
         }
     }
