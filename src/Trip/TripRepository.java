@@ -1,15 +1,15 @@
 package Trip;
 
 import Itineraries.Itinerary;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TripRepository {
     private List<TripModel> trips = new ArrayList<>();
 
+    //json 파일 저장 파트
     public TripModel save(String tripId, String title, String startDate, String endDate) {
         TripModel trip = new TripModel(title, startDate, endDate);
         trips.add(trip);
@@ -41,8 +41,8 @@ public class TripRepository {
             folder.mkdirs();
         }
 
-//        String fileName = folderPath + "/itinerary_" + trip.getTripId() + ".json";
-        String fileName = folderPath + "/itinerary.json";
+        String fileName = folderPath + "/itinerary_" + trip.getTripId() + ".json";
+//        String fileName = folderPath + "/itinerary_857142c0-3909-46bc-b680-c0476aef658e.json";
 
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write(tripToJson(trip));
