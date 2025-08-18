@@ -28,13 +28,13 @@ public class TripController {
         List<TripModel> trips = tripService.getAllTrips();
         tripView.printTripList(trips);
 
-        String tripId = tripView.inputTripId();
-
-        TripModel trip = tripService.getTripById(tripId);
-        if (trip == null) {
-            System.out.println("해당 ID의 여행이 존재하지 않습니다.");
-        } else {
-            tripView.printTripDetails(trip);
-        }
+//        String tripId = tripView.inputTripId();
+//
+//        TripModel trip = tripService.getTripById(tripId);
+//        if (trip == null) {
+//            System.out.println("해당 ID의 여행이 존재하지 않습니다.");
+//        } else {
+//            tripView.printTripDetails(trip);
+//        }
     }
 }
