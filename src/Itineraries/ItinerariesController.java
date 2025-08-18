@@ -42,7 +42,6 @@ public class ItinerariesController {
         if (itineraries.isEmpty()) {
            System.out.println("해당 여행의 여정이 없습니다.");
         } else {
-            System.out.println("=== " + tripId + " 여행의 여정 목록 ===");
             itinerariesView.printItineraries(tripId,itineraries);
         }
     }
