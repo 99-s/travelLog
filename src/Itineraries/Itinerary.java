@@ -14,6 +14,7 @@ public class Itinerary {
     private String arrivalTime;
 
     // 숙박 정보
+    private String accommodation;
     private String checkInTime;
     private String checkOutTime;
   
@@ -43,6 +44,10 @@ public class Itinerary {
 
     public void setCheckOut(String checkOutTime) {
         this.checkOutTime = checkOutTime;
+    }
+
+    public void setAccommodation(String accommodation){
+        this.accommodation = accommodation;
     }
     
     public String getItineraryId() {
@@ -76,6 +81,10 @@ public class Itinerary {
 
     public String getCheckOut() {
         return checkOutTime;
+    }
+
+    public String getAccommodation(){
+        return accommodation;
     }
 
     public void setMoveInfo(String departurePlace, String destination, String departureTime, String arrivalTime) {
