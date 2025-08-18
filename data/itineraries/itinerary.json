@@ -1,0 +1,15 @@
+  {
+    "trip_id": "12fac977-c141-4463-8599-910703a0c7b5",
+    "trip_name": "cnkd",
+    "start_date": "2020-02-02",
+    "end_date": "2020-02-10",
+    "itineraries": [
+      {
+        "itinerary_id": "aa037530-5c15-4d72-a431-5b9d26638997,",
+        "departure_place": "123r",
+        "destination": "asd",
+        "departure_time": "2020-02-02 20:20",
+        "arrival_time": "2020-03-20 02:02",
+      }
+    ]
+  }

@@ -20,9 +20,7 @@ public class TripModel {
         this.itineraries = new ArrayList<>();
     }
 
-    public void addItinerary(Itinerary itinerary) {
-        itineraries.add(itinerary);
-    }
+
 
     public String getTripId() { return tripId; }
     public String getTripName() { return tripName; }
