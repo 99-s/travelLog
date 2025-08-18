@@ -5,7 +5,38 @@ import java.util.UUID;
 public class Itinerary {
     private String itineraryId;
     private String tripId;
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     private String type;
+
+    public void setDeparturePlace(String departurePlace) {
+        this.departurePlace = departurePlace;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public void setArrivalTime(String arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public void setCheckIn(String checkInTime) {
+        this.checkInTime = checkInTime;
+    }
+
+    public void setCheckOut(String checkOutTime) {
+        this.checkOutTime = checkOutTime;
+    }
+
+>>>>>>> 8ca7984 (itineraries)
     // 이동 정보
     private String departurePlace;
     private String destination;
@@ -23,23 +54,6 @@ public class Itinerary {
 
     public String getTripId() {
         return tripId;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    // setter
-    public void setMoveInfo(String departurePlace, String destination, String departureTime, String arrivalTime) {
-        this.departurePlace = departurePlace;
-        this.destination = destination;
-        this.departureTime = departureTime;
-        this.arrivalTime = arrivalTime;
-    }
-
-    public void setAccommodationInfo(String checkInTime, String checkOutTime) {
-        this.checkInTime = checkInTime;
-        this.checkOutTime = checkOutTime;
     }
 
     public String getDeparturePlace() {
@@ -66,11 +80,21 @@ public class Itinerary {
         return checkOutTime;
     }
 
+    public void setMoveInfo(String departurePlace, String destination, String departureTime, String arrivalTime) {
+        this.departurePlace = departurePlace;
+        this.destination = destination;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+    }
 
+    public void setAccommodationInfo(String checkInTime, String checkOutTime) {
+        this.checkInTime = checkInTime;
+        this.checkOutTime = checkOutTime;
+    }
 
-    public Itinerary(String tripId,String type) {
+    public Itinerary(String tripId, String type) {
         this.itineraryId = UUID.randomUUID().toString();
         this.tripId = tripId;
-        this.type= type;
+        this.type = type;
     }
 }

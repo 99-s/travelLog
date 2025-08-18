@@ -1,4 +1,5 @@
-import AccommodationInfo.AccommodationController;
+
+import AccommodationInfo.AccommodationInfoController;
 import AccommodationInfo.AccommodationInfoView;
 import Home.HomeController;
 import Home.HomeView;
@@ -21,7 +22,7 @@ public class Main {
         TripRepository tripRepository = new TripRepository();
         TripService tripService = new TripService(tripRepository);
         TripController tripController = new TripController(tripView, tripService);
-        AccommodationController accommodationController = new AccommodationController();
+        AccommodationInfoController accommodationInfoController = new AccommodationInfoController();
         MoveInfoController moveInfoController = new MoveInfoController();
         AccommodationInfoView accommodationInfoView = new AccommodationInfoView();
         MoveInfoView moveInfoView = new MoveInfoView();
@@ -29,7 +30,7 @@ public class Main {
         ItinerariesView itinerariesView = new ItinerariesView();
         ItinerariesRepository itinerariesRepository = new ItinerariesRepository();
         ItinerariesService itinerariesService = new ItinerariesService(itinerariesRepository);
-        ItinerariesController itinerariesController = new ItinerariesController(itinerariesView,accommodationController,moveInfoController,accommodationInfoView,moveInfoView,itinerariesService);
+        ItinerariesController itinerariesController = new ItinerariesController(itinerariesView,accommodationInfoController,moveInfoController,accommodationInfoView,moveInfoView,itinerariesService);
         HomeController homeController = new HomeController(homeView, tripController, itinerariesController);
 
         homeController.start();
