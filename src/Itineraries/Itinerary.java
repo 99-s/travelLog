@@ -1,9 +1,5 @@
 package Itineraries;
 
-import AccommodationInfo.AccommodationInfo;
-import MoveInfo.MoveInfo;
-
-import java.util.List;
 import java.util.UUID;
 
 public class Itinerary {
@@ -27,6 +23,7 @@ public class Itinerary {
     public String getTripId() {
         return tripId;
     }
+
     public String getType() {
         return type;
     }
@@ -47,6 +44,7 @@ public class Itinerary {
     public String getDeparturePlace() {
         return departurePlace;
     }
+
 
     public String getDestination() {
         return destination;
