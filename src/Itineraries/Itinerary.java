@@ -5,12 +5,21 @@ import java.util.UUID;
 public class Itinerary {
     private String itineraryId;
     private String tripId;
+    private String type;
+  
+  // 이동 정보
+    private String departurePlace;
+    private String destination;
+    private String departureTime;
+    private String arrivalTime;
 
+    // 숙박 정보
+    private String checkInTime;
+    private String checkOutTime;
+  
     public void setType(String type) {
         this.type = type;
     }
-
-    private String type;
 
     public void setDeparturePlace(String departurePlace) {
         this.departurePlace = departurePlace;
@@ -35,19 +44,7 @@ public class Itinerary {
     public void setCheckOut(String checkOutTime) {
         this.checkOutTime = checkOutTime;
     }
-
->>>>>>> 8ca7984 (itineraries)
-    // 이동 정보
-    private String departurePlace;
-    private String destination;
-    private String departureTime;
-    private String arrivalTime;
-
-    // 숙박 정보
-    private String checkInTime;
-    private String checkOutTime;
-
-
+    
     public String getItineraryId() {
         return itineraryId;
     }
@@ -55,6 +52,7 @@ public class Itinerary {
     public String getTripId() {
         return tripId;
     }
+
 
     public String getDeparturePlace() {
         return departurePlace;
@@ -90,6 +88,10 @@ public class Itinerary {
     public void setAccommodationInfo(String checkInTime, String checkOutTime) {
         this.checkInTime = checkInTime;
         this.checkOutTime = checkOutTime;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public Itinerary(String tripId, String type) {
