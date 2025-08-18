@@ -16,6 +16,7 @@ public class Itinerary {
     private String checkInTime;
     private String checkOutTime;
 
+
     public String getItineraryId() {
         return itineraryId;
     }
@@ -44,7 +45,6 @@ public class Itinerary {
     public String getDeparturePlace() {
         return departurePlace;
     }
-
 
     public String getDestination() {
         return destination;
